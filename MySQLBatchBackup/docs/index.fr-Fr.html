@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Shim-Sao" />
+    <title>XtrmAddons MySQLBatchBackup 1.4</title>
+</head>
+<body>
+	<div class="ss-block">
+		<h1>
+			MySQLBatchBackup
+			<a href="index.html" target="_blank"><img src="http://flags.ox3.in/svg/gb.svg" height="16" alt="en-GB"/></a>
+		</h1>
+		<p>
+			MySQLBatchBackup est une série de scripts permettant de sauvegarder une base de données distante UNIX sur un serveur en local WINDOWS avec les protocoles SHH et SFTP.
+		</p>
+	</div>
+	<div class="ss-block">
+		<h2>1 - Prérequis</h2>
+		<ul>
+			<li>Avoir <b><a href="https://www.putty.org" target="_blank">Putty</a></b> d'installé.</li>
+			<li>Télécharger <b><a href="http://www.7-zip.org/" target="_blank">7-Zip</a></b> ou l'avoir d'installé.</li>
+		</ul>
+		<p>Optionnel :</p>
+		<ul>
+			<li>Avoir <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> d'installé.</li>
+		</ul>
+		
+		<h2>2 - Configurer l'application</h2>
+		<ul>
+			<li>Ouvrir le fichier <b><i>application.cmd</i></b> avec un <a href="https://notepad-plus-plus.org" target="_blank">éditeur de texte</a>.</li>
+			<li>Vérifier et changer le chemin du dossier <b>MBB_PATH_ZIP</b> où se trouve l'installation du logiciel <b><a href="http://www.7-zip.org/" target="_blank">7-Zip</a></b> ou placer l'executable dans le répertoire nommé "zip".
+			<br />Commenter l'ajout à la variable d'environnement Windows <b>PATH</b> si un autre chemin de dossier existe déjà.</li>
+			<li>Décommenter et vérifier le chemin du dossier où se trouve l'installation du logiciel <b><a href="https://www.putty.org" target="_blank">Putty</a></b> si celui ci ne se trouve pas déjà dans la variable d'environement Windows <b>PATH</b>.</li>
+			<li>Décommenter et vérifier le chemin du dossier où se trouve l'installation du logiciel <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> si celui ci ne se trouve pas déjà dans la variable d'environement Windows <b>PATH</b>.</li>
+			<li>Sauvegarder.</li>
+		</ul>
+		
+		<h2>3 - Configurer un backup ?</h2>
+			<h3>Configurer les serveurs et base de données :</h3>
+			<ul>
+				<li>
+					Dans le dossier <b><i>config</i></b> Copier/Coller le fichier <b><i>config.example.cmd</i></b>
+					et le renommer en par exemple : <b><i>config.monsite.cmd</i></b></li>
+				<li>
+					Ouvrir le fichier <b><i>config.monsite.cmd</i></b> avec un <a href="https://notepad-plus-plus.org" target="_blank">éditeur de texte</a> et éditer les informations suivantes :
+					<br /><strong>dbSrc =</strong> serveur distant. Exemple : 1&amp;1
+					<br /><strong>dbDest =</strong> serveur local.
+				</li>
+				<li>Sauvegarder.</li>
+			</ul>
+			
+			<h3>Créer un fichier de lancement :</h3>
+			<ul>
+				<li>Copier/Coller le fichier <b><i>backup-example.bat</i></b> et le renommer en par exemple : <b><i>backup-monsite.bat</i></b></li>
+				<li>Ouvrir le fichier <b><i>backup-monsite.bat</i></b> avec un <a href="https://notepad-plus-plus.org" target="_blank">éditeur de texte</a>.</li>
+				<li>Editer les lignes suivantes :</li>
+				<li><b>MBB_CONFIG_FILE</b> : Remplacer le nom du fichier par celui créé précédemment.</li>
+				<li><b>MBB_PARAM_BACKUP</b> : Activer ou non l'import automatique dans la base de donnée locale <b>(yes|no)</b>.
+				<br />Noter que pour cela <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> doit être disponible.</li>
+				<li>Sauvegarder.</li>
+			</ul>
+		
+		<h2>4 - Lancer le backup</h2>
+		<ul>
+			<li>Double cliquer sur <b><i>backup-monsite.bat</i></b> et suivre les instructions.</li>
+		</ul>
+	</div>
+</body>
+</html>
+    

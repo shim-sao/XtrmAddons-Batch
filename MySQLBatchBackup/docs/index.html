@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Shim-Sao" />
+    <title>XtrmAddons MySQLBatchBackup 1.4</title>
+</head>
+<body>
+	<div class="ss-block">
+		<h1>
+			MySQLBatchBackup
+			<a href="index.fr-Fr.html" target="_blank"><img src="http://flags.ox3.in/svg/fr.svg" height="16" alt="fr-FR"/></a>
+		</h1>
+		<p>
+			MySQLBatchBackup is a series of scripts designs for backing up a remote UNIX database on a local WINDOWS server with SHH and SFTP protocols.
+		</p>
+	</div>
+	<div class="ss-block">
+		<h2>1 - Prerequisites</h2>
+		<ul>
+			<li>Have <b><a href="https://www.putty.org" target="_blank">Putty</a></b> to be installed.</li>
+			<li>Download <b><a href="http://www.7-zip.org/" target="_blank">7-Zip</a></b> or have to be installed.</li>
+		</ul>
+		<p>Optional :</p>
+		<ul>
+			<li>Have <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> to be installed.</li>
+		</ul>
+		
+		<h2>2 - Configure the application</h2>
+		<ul>
+			<li>Open the file <b><i>application.cmd</i></b> with a <a href="https://notepad-plus-plus.org" target="_blank">text editor</a>.</li>
+			<li>Check and change the folder path <b>MBB_PATH_ZIP</b> where is the software installation of <b><a href="http://www.7-zip.org/" target="_blank">7-Zip</a></b> or place the executable in the directory named "zip".
+			<br /> Comment on adding to the Windows environment variable <b>PATH</b> if another folder path already exists.</li>
+			<li>Uncomment and check the folder path where the <b><a href="https://www.putty.org" target="_blank">Putty</a></b> software installation is located if it is not already in the Windows environment variable <b>PATH</b>.</li>
+			<li>Uncomment and check the folder path where the <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> software installation is located if it is not already in the Windows environment variable <b>PATH</b>.</li>
+			<li>Save.</li>
+		</ul>
+		
+		<h2>3 - Configurer un backup ?</h2>
+			<h3>Configure the servers and database :</h3>
+			<ul>
+				<li>
+					In the directory <b><i>config</i></b> Copy/Paste the file <b><i>config.example.cmd</i></b> and rename it for example : <b><i>config.monsite.cmd</i></b></li>
+				<li>
+					Open the file <b><i>config.monsite.cmd</i></b> with a <a href="https://notepad-plus-plus.org" target="_blank">text editor</a> and edit the following informations :
+					<br /><strong>dbSrc =</strong> remote server. Example : 1&amp;1
+					<br /><strong>dbDest =</strong> local serveur.
+				</li>
+				<li>Save.</li>
+			</ul>
+			
+			<h3>Create a launch file :</h3>
+			<ul>
+				<li>Copy/Paste the file <b><i>backup-example.bat</i></b> and rename it for example : <b><i>backup-monsite.bat</i></b></li>
+				<li>Open the file <b><i>backup-monsite.bat</i></b> with a <a href="https://notepad-plus-plus.org" target="_blank">text editor</a>.</li>
+				<li>Edit the following lines :</li>
+				<li><b>MBB_CONFIG_FILE</b> : Replace the file name with the one created previously.</li>
+				<li><b>MBB_PARAM_BACKUP</b> : Enable or disable automatic import into the local database <b>(yes|no)</b>.
+				<br />Notice, to do this <b><a href="https://www.mysql.com" target="_blank">MySQL 5+</a></b> must be available.</li>
+				<li>Save.</li>
+			</ul>
+		
+		<h2>4 - Start the backup</h2>
+		<ul>
+			<li>Double click on <b><i>backup-monsite.bat</i></b> and follow the instructions.</li>
+		</ul>
+	</div>
+</body>
+</html>
+    
