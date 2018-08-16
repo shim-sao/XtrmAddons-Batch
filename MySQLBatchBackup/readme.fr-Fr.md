@@ -1,4 +1,4 @@
-# XtrmAddons MySQLBatchBackup 1.4 [![en-GB](http://flags.ox3.in/svg/gb.svg)](readme.md)
+# XtrmAddons MySQLBatchBackup 1.4 [![en-GB](https://github.com/shim-sao/XtrmAddons-Batch/blob/master/MySQLBatchBackup/images/united-kingdom-flag-icon-16.png)](https://github.com/shim-sao/XtrmAddons-Batch/blob/master/MySQLBatchBackup/readme.fr-Fr.md)
 ================
 
 MySQLBatchBackup est une série de scripts permettant de sauvegarder une base de données distante UNIX sur un serveur en local WINDOWS avec les protocoles SHH et SFTP.
