@@ -1,10 +1,8 @@
 # MySQLBatchBackup 1.4 [![fr-FR](https://github.com/shim-sao/XtrmAddons-Batch/blob/master/MySQLBatchBackup/images/france-flag-icon-16.png)](https://github.com/shim-sao/XtrmAddons-Batch/blob/master/MySQLBatchBackup/readme.fr-Fr.md)
-================
 
 MySQLBatchBackup is a series of scripts designs for backing up a remote UNIX database on a local WINDOWS server with SHH and SFTP protocols.
 
 ## 1 - Prerequisites
------------------
 
 *   Have **[Putty](https://www.putty.org)** to be installed.
 *   Download **[7-Zip](http://www.7-zip.org/)** or have to be installed.
