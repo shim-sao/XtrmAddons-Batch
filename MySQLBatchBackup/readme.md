@@ -10,9 +10,9 @@ MySQLBatchBackup is a series of scripts designs for backing up a remote UNIX dat
 Optional :
 
 *   Have **[MySQL 5+](https://www.mysql.com)** to be installed.
+-----------------------------
 
 ## 2 - Configure the application
------------------------------
 
 *   Open the file **_application.cmd_** with a [text editor](https://notepad-plus-plus.org).
 *   Check and change the folder path **MBB\_PATH\_ZIP** where is the software installation of **[7-Zip](http://www.7-zip.org/)** or place the executable in the directory named "zip".  
@@ -20,9 +20,9 @@ Optional :
 *   Uncomment and check the folder path where the **[Putty](https://www.putty.org)** software installation is located if it is not already in the Windows environment variable **PATH**.
 *   Uncomment and check the folder path where the **[MySQL 5+](https://www.mysql.com)** software installation is located if it is not already in the Windows environment variable **PATH**.
 *   Save.
+-----------------------------
 
 ## 3 - Configurer un backup ?
---------------------------
 
 ### Configure the servers and database :
 
@@ -41,8 +41,9 @@ Optional :
 *   **MBB\_PARAM\_BACKUP** : Enable or disable automatic import into the local database **(yes|no)**.  
     Notice, to do this **[MySQL 5+](https://www.mysql.com)** must be available.
 *   Save.
+-----------------------------
 
 ## 4 - Start the backup
---------------------
 
 *   Double click on **_backup-monsite.bat_** and follow the instructions.
+-----------------------------
