@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Shim-Sao" />
+    <title>XtrmAddons OpensslBatchCertificate 1.0</title>
+</head>
+<body>
+	<div class="ss-block">
+		<h1>
+			OpensslBatchCertificate
+			<a href="index.fr-Fr.html" target="_blank"><img src="http://flags.ox3.in/svg/fr.svg" height="16" alt="fr-FR"/></a>
+		</h1>
+		<p>
+			OpensslBatchCertificate is a script designs to 
+			create SSL certificate with OpenSSL and Windows.
+		</p>
+	</div>
+	<div class="ss-block">
+		<h2>1 - Prerequisites</h2>
+		<ul>
+			<li>
+				IMPORTANT : To add <b>OPENSSL_CONF</b> permanently 
+				to the Windows environment variables, this script 
+				must be execute as administrator.
+			</li>
+		</ul>
+		
+		<h2>2 - Configure the application</h2>
+		<ul>
+			<li>Open the file <b><i>application.cmd</i></b> with a 
+				<a href="https://notepad-plus-plus.org" target="_blank">text editor</a>.</li>
+			<li>Replace the <b>HOSTNAME</b> variable by the host name to associate to the certificate during creation.</li>
+			<li>Check the folder path <b>APACHE_ROOT</b> where the 
+				<a href="http://www.apache.org/dyn/closer.cgi" target="_blank"><b>Apache</b></a> software installation is 
+				located if it is not already in the Windows environment variable <b>PATH</b>.
+			<li>Save.</li>
+		</ul>
+		
+		<h2>3 - Start the generation of a certificate.</h2>
+		<ul>
+			<li>Double click on <b><i>openssl-certificate.bat</i></b> and follow the instructions.</li>
+		</ul>
+	</div>
+</body>
+</html>
+    
