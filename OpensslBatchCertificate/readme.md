@@ -14,23 +14,27 @@ IMPORTANT : To add **OPENSSL_CONF** permanently to the Windows environment varia
 
 *   Check the folder path **APACHE_ROOT** where the **[apache.exe](http://www.apache.org/dyn/closer.cgi)** software installation is located.
 	
-	APACHE_ROOT : Enter here the name|path of the Apache 2.4 installation directory.
+	>APACHE_ROOT : Enter here the name|path of the Apache 2.4 installation directory.
 	
 *   Replace the **HOSTNAME** variable value by the host name to associate to the certificate during creation.
 
-	HOSTNAME : Enter your hostname here.
+	>HOSTNAME : Enter your hostname here.
 	
 *   Replace variables Informations Transmitter and Informations Receiver by your own informations.
 
-	VAR_C  : Country ISO name 2 letters
-	VAR_O  : Organization Name.
-	VAR_OU : Optional organization departement name.
-	VAR_ST : State or Region in the country.
-	VAR_L  : Location or City.
+	>VAR_C  : Country ISO name 2 letters
+	
+	>VAR_O  : Organization Name.
+	
+	>VAR_OU : Optional organization departement name.
+	
+	>VAR_ST : State or Region in the country.
+	
+	>VAR_L  : Location or City.
 	
 *	Edit the following line to generate the variable ** subjectAltName ** if necessary.
 
-	echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
+	>echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
 	
 *   Save.
 -----------------------------
