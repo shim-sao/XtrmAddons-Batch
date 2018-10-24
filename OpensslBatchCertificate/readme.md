@@ -5,6 +5,7 @@ OpensslBatchCertificate is a script designs to create SSL certificate with OpenS
 ## 1 - Prerequisites
 
 IMPORTANT : To add **OPENSSL_CONF** permanently to the Windows environment variables, this script must be execute as administrator.
+
 -----------------------------
 
 ## 2 - Configure the application
