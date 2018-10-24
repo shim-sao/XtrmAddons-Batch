@@ -31,7 +31,7 @@ IMPORTANT : Pour ajouter **OPENSSL_CONF** de manière permanente aux variables d
 	
 *	Modifier la ligne suivante pour générer la variable **subjectAltName** si besoin.
 
-	echo subjectAltName=DNS:%HOSTNAME%,DNS:www.%HOSTNAME% > %SN_TXT%
+	echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
 	
 *   Sauvegarder.
 -----------------------------
