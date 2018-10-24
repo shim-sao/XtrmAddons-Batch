@@ -15,23 +15,27 @@ IMPORTANT : Pour ajouter **OPENSSL_CONF** de manière permanente aux variables d
 
 *   Vérifier le chemin du dossier **APACHE_ROOT** où se trouve l'installation du logiciel **[apache.exe](http://www.apache.org/dyn/closer.cgi)**.
 	
-	APACHE_ROOT : Entrez le nom|chemin du répertoire d'installation Apache 2.4.
+	>APACHE_ROOT : Entrez le nom|chemin du répertoire d'installation Apache 2.4.
 	
 *   Remplacer la valeur de la variable **HOSTNAME** par le nom d'hôte à associer au certificat lors de la création.
 
-	HOSTNAME : Entrez le nom de l'hôte ici.
+	>HOSTNAME : Entrez le nom de l'hôte ici.
 	
 *   Remplacer les variables Informations Transmitter and Informations Receiver par ses propres informations.
 
-	VAR_C  : Nom Pays ISO 2 letters
-	VAR_O  : Nom de l'Organisation.
-	VAR_OU : Nom du Département de l'Organisation Optionel.
-	VAR_ST : Etat ou Region dans le pays.
-	VAR_L  : Localisation ou Ville.
+	>VAR_C  : Nom Pays ISO 2 letters
 	
+	>VAR_O  : Nom de l'Organisation.
+	
+	>VAR_OU : Nom du Département de l'Organisation Optionel.
+	
+	>VAR_ST : Etat ou Region dans le pays.
+	
+	>VAR_L  : Localisation ou Ville.
+
 *	Modifier la ligne suivante pour générer la variable **subjectAltName** si besoin.
 
-	echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
+	>echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
 	
 *   Sauvegarder.
 -----------------------------
