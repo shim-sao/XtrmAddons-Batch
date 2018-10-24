@@ -30,7 +30,7 @@ IMPORTANT : To add **OPENSSL_CONF** permanently to the Windows environment varia
 	
 *	Edit the following line to generate the variable ** subjectAltName ** if necessary.
 
-	echo subjectAltName=DNS:%HOSTNAME%,DNS:www.%HOSTNAME% > %SN_TXT%
+	echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
 	
 *   Save.
 -----------------------------
