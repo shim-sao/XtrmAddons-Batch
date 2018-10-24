@@ -4,13 +4,17 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="Shim-Sao" />
-    <title>XtrmAddons OpensslBatchCertificate 1.0</title>
+    <title>XtrmAddons OpensslBatchCertificate 2.0</title>
+    <style type="text/css">
+    	li {margin-bottom:1rem }
+    	code {display:block;padding-top:0.5rem;color:#666}
+    </style>
 </head>
 <body>
 	<div class="ss-block">
 		<h1>
 			OpensslBatchCertificate
-			<a href="index.html" target="_blank"><img src="http://flags.ox3.in/svg/gb.svg" height="16" alt="en-GB"/></a>
+			<a href="index.html" target="_blank"><img src="http://flags.ox3.in/mini/gb.png" height="16" alt="en-GB"/></a>
 		</h1>
 		<p>
 			OpensslBatchCertificate est un script conçu pour créer 
@@ -30,12 +34,40 @@
 		
 		<h2>2 - Configurer l'application</h2>
 		<ul>
-			<li>Ouvrir le fichier <b><i>openssl-certificate.cmd</i></b> avec un 
-				<a href="https://notepad-plus-plus.org" target="_blank">éditeur de texte</a>.</li>
-			<li>Remplacez la variable <b>HOSTNAME</b> par le nom d'hôte à associer au certificat lors de la création.</li>
-			<li>Vérifier le chemin du dossier <b>APACHE_ROOT</b> où se trouve l'installation du logiciel 
-				<a href="http://www.apache.org/dyn/closer.cgi" target="_blank"><b>Apache</b></a> si celui 
-				ci ne se trouve pas déjà dans la variable d'environement Windows <b>PATH</b>.</li>
+			<li>
+				Ouvrir le fichier <b><i>openssl-certificate.cmd</i></b> avec un 
+				<a href="https://notepad-plus-plus.org" target="_blank">éditeur de texte</a>.
+			</li>
+			
+			<li>
+				Vérifier le chemin du dossier <b>APACHE_ROOT</b> où se trouve l'installation du logiciel 
+				<a href="http://www.apache.org/dyn/closer.cgi" target="_blank"><b>Apache</b></a>.
+				<br />
+				<code>APACHE_ROOT : Entrez le nom|chemin du répertoire d'installation Apache 2.4.</code>
+			</li>
+			
+			<li>
+				Remplacez la variable <b>HOSTNAME</b> par le nom d'hôte à associer au certificat lors de la création.
+				<br />
+				<code>HOSTNAME : Entrez le le nom de l'hôte ici.</code>
+			</li>
+			
+			<li>
+				Remplacer les variables Informations Transmitter and Informations Receiver par ses propres informations.
+				<br />
+				<code>VAR_C  : Nom Pays ISO 2 letters<br />
+				      VAR_O  : Nom de l'Organisation.<br />
+					  VAR_OU : Nom du Département de l'Organisation Optionnel.<br />
+					  VAR_ST : Etat ou Region dans le pays.<br />
+					  VAR_L  : Localisation ou Ville.</code>
+			</li>
+			
+			<li>
+				Modifier la ligne suivante pour générer la variable <strong>subjectAltName</strong> si besoin.
+				<br />
+				<code>echo subjectAltName=DNS:%HOSTNAME%,DNS:www.%HOSTNAME% > %SN_TXT%</code>
+			</li>
+			
 			<li>Sauvegarder.</li>
 		</ul>
 		

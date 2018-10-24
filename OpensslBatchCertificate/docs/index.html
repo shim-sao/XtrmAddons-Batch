@@ -4,13 +4,17 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="Shim-Sao" />
-    <title>XtrmAddons OpensslBatchCertificate 1.0</title>
+    <title>XtrmAddons OpensslBatchCertificate 2.0</title>
+    <style type="text/css">
+    	li {margin-bottom:1rem }
+    	code {display:block;padding-top:0.5rem;color:#666}
+    </style>
 </head>
 <body>
 	<div class="ss-block">
 		<h1>
 			OpensslBatchCertificate
-			<a href="index.fr-Fr.html" target="_blank"><img src="http://flags.ox3.in/svg/fr.svg" height="16" alt="fr-FR"/></a>
+			<a href="index.fr-Fr.html" target="_blank"><img src="http://flags.ox3.in/mini/fr.png" height="16" alt="fr-FR"/></a>
 		</h1>
 		<p>
 			OpensslBatchCertificate is a script designs to 
@@ -29,12 +33,40 @@
 		
 		<h2>2 - Configure the application</h2>
 		<ul>
-			<li>Open the file <b><i>application.cmd</i></b> with a 
-				<a href="https://notepad-plus-plus.org" target="_blank">text editor</a>.</li>
-			<li>Replace the <b>HOSTNAME</b> variable by the host name to associate to the certificate during creation.</li>
-			<li>Check the folder path <b>APACHE_ROOT</b> where the 
-				<a href="http://www.apache.org/dyn/closer.cgi" target="_blank"><b>Apache</b></a> software installation is 
-				located if it is not already in the Windows environment variable <b>PATH</b>.
+			<li>
+				Open the file <b><i>application.cmd</i></b> with a 
+				<a href="https://notepad-plus-plus.org" target="_blank">text editor</a>.
+			</li>
+				
+			<li>
+				Check the folder path <b>APACHE_ROOT</b> where the 
+				<a href="http://www.apache.org/dyn/closer.cgi" target="_blank"><b>Apache</b></a> software installation is located.
+				<br />
+				<code>APACHE_ROOT : Enter here the name|path of the Apache 2.4 installation.</code>
+			</li>
+			
+			<li>
+				Replace the <b>HOSTNAME</b> variable by the host name to associate to the certificate during creation.
+				<br />
+				<code>HOSTNAME : Enter your hostname here.</code>
+			</li>
+			
+			<li>
+				Replace variables Informations Transmitter and Informations Receiver by your own informations.
+				<br />
+				<code>VAR_C  : Country ISO name 2 letters<br />
+				      VAR_O  : Organization name.<br />
+					  VAR_OU : Optional organization departement name.<br />
+					  VAR_ST : State or Region in the country.<br />
+					  VAR_L  : Location or City.</code>
+			</li>
+			
+			<li>
+				Edit the following line to generate the variable <strong>subjectAltName</strong> if necessary.
+				<br />
+				<code>echo subjectAltName=DNS:%HOSTNAME%,DNS:www.%HOSTNAME% > %SN_TXT%</code>
+			</li>
+			
 			<li>Save.</li>
 		</ul>
 		
