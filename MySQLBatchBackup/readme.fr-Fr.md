@@ -15,7 +15,7 @@ Optionnel :
 ## 2 - Configurer l'application
 
 *   Ouvrir le fichier **_application.cmd_** avec un [éditeur de texte](https://notepad-plus-plus.org).
-*   Vérifier et changer le chemin du dossier **MBB\_PATH\_ZIP** où se trouve l'installation du logiciel **[7-Zip](http://www.7-zip.org/)** ou placer l'executable dans le répertoire nommé "zip".  
+*   Vérifier et changer le chemin du dossier **MBB\_PATH\_ZIP** où se trouve l'installation du logiciel **[7-Zip](https://www.7-zip.org/)** ou placer l'executable dans le répertoire nommé "zip".  
     Commenter l'ajout à la variable d'environnement Windows **PATH** si un autre chemin de dossier existe déjà.
 *   Décommenter et vérifier le chemin du dossier où se trouve l'installation du logiciel **[Putty](https://www.putty.org)** si celui ci ne se trouve pas déjà dans la variable d'environement Windows **PATH**.
 *   Décommenter et vérifier le chemin du dossier où se trouve l'installation du logiciel **[MySQL 5+](https://www.mysql.com)** si celui ci ne se trouve pas déjà dans la variable d'environement Windows **PATH**.

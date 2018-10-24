@@ -15,7 +15,7 @@ Optional :
 ## 2 - Configure the application
 
 *   Open the file **_application.cmd_** with a [text editor](https://notepad-plus-plus.org).
-*   Check and change the folder path **MBB\_PATH\_ZIP** where is the software installation of **[7-Zip](http://www.7-zip.org/)** or place the executable in the directory named "zip".  
+*   Check and change the folder path **MBB\_PATH\_ZIP** where is the software installation of **[7-Zip](https://www.7-zip.org/)** or place the executable in the directory named "zip".  
     Comment on adding to the Windows environment variable **PATH** if another folder path already exists.
 *   Uncomment and check the folder path where the **[Putty](https://www.putty.org)** software installation is located if it is not already in the Windows environment variable **PATH**.
 *   Uncomment and check the folder path where the **[MySQL 5+](https://www.mysql.com)** software installation is located if it is not already in the Windows environment variable **PATH**.
