@@ -10,37 +10,39 @@ IMPORTANT : To add **OPENSSL_CONF** permanently to the Windows environment varia
 
 ## 2 - Configure the application
 
-*   Open the file **_openssl-certificate.bat_** with a [text editor](https://notepad-plus-plus.org).
+* Open the file **_openssl-certificate.bat_** with a [text editor](https://notepad-plus-plus.org).
 
-*   Check the folder path **APACHE_ROOT** where the **[apache.exe](http://www.apache.org/dyn/closer.cgi)** software installation is located.
-	
-	>APACHE_ROOT : Enter here the name|path of the Apache 2.4 installation directory.
-	
-*   Replace the **HOSTNAME** variable value by the host name to associate to the certificate during creation.
+* Check the folder path **APACHE_ROOT** where the **[apache.exe](http://www.apache.org/dyn/closer.cgi)** software installation is located.
 
-	>HOSTNAME : Enter your hostname here.
-	
-*   Replace variables Informations Transmitter and Informations Receiver by your own informations.
+  >APACHE_ROOT : Enter here the name|path of the Apache 2.4 installation directory.
 
-	>VAR_C  : Country ISO name 2 letters
-	
-	>VAR_O  : Organization Name.
-	
-	>VAR_OU : Optional organization departement name.
-	
-	>VAR_ST : State or Region in the country.
-	
-	>VAR_L  : Location or City.
-	
-*	Edit the following line to generate the variable ** subjectAltName ** if necessary.
+* Replace the **HOSTNAME** variable value by the host name to associate to the certificate during creation.
 
-	>echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
-	
-*   Save.
+  >HOSTNAME : Enter your hostname here.
+
+* Replace variables Informations Transmitter and Informations Receiver by your own informations.
+
+  >VAR_C  : Country ISO name 2 letters
+  >
+  >VAR_O  : Organization Name.
+  >
+  >VAR_OU : Optional organization departement name.
+  >
+  >VAR_ST : State or Region in the country.
+  >
+  >VAR_L  : Location or City.
+
+* Edit the following line to generate the variable **subjectAltName** if necessary.
+
+  >echo subjectAltName=DNS&#58;%HOSTNAME%,DNS&#58;www%HOSTNAME% > %SN_TXT%
+
+* Save.
+
 -----------------------------
 
 ## 3 - Start the process
 
-*   Double click on **_openssl-certificate.bat_** and follow the instructions.
-*   The files generated during the creation process are added in a directory named **certificates** itself created in the **Apache24** directory like this **...\Apache24\certificates\[generated files keys, request and certificates]**
+* Double click on **_openssl-certificate.bat_** and follow the instructions.
+* The files generated during the creation process are added in a directory named **certificates** itself created in the **Apache24** directory like this **...\Apache24\certificates\[generated files keys, request and certificates]**
+
 -----------------------------
